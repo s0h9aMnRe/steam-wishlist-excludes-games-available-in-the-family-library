@@ -42,7 +42,8 @@ pytesseract是一个光学字符识别（OCR）工具的Python封装，它可以
 ```bash
 sudo apt - get install tesseract - ocr
 ```
-在Windows系统中，需要从官网（https://github.com/UB-Mannheim/tesseract/wiki）
+在Windows系统中，需要从官网 
+https://github.com/UB-Mannheim/tesseract/wiki
 下载安装包进行安装。
 
 ### Pillow
