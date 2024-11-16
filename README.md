@@ -58,6 +58,10 @@ pip install pyscreenshot
 具体实现逻辑在代码注释内有详细说明。
 
 # 如何导出愿望单
+![如何确定安装好了augmentedsteam](https://github.com/s0h9aMnRe/steam-wishlist-excludes-games-available-in-the-family-library/blob/main/%E7%A4%BA%E4%BE%8B%E7%85%A7%E7%89%87/%E5%9B%BE%E7%89%871.png)
 
+![图片2](https://github.com/s0h9aMnRe/steam-wishlist-excludes-games-available-in-the-family-library/blob/main/%E7%A4%BA%E4%BE%8B%E7%85%A7%E7%89%87/%E5%9B%BE%E7%89%872.png)
+
+![图片3](https://github.com/s0h9aMnRe/steam-wishlist-excludes-games-available-in-the-family-library/blob/main/%E7%A4%BA%E4%BE%8B%E7%85%A7%E7%89%87/%E5%9B%BE%E7%89%873.png)
 # 如何确定自己的steam游戏库的搜索框位置
-
+![图片4](https://github.com/s0h9aMnRe/steam-wishlist-excludes-games-available-in-the-family-library/blob/main/%E7%A4%BA%E4%BE%8B%E7%85%A7%E7%89%87/%E5%9B%BE%E7%89%874.jpg)
