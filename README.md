@@ -15,7 +15,8 @@
 # 用前准备
 
 ## 浏览器插件安装
-需要在浏览器安装插件，插件地址为：https://augmentedsteam.com/。其用途是导出愿望单。
+需要在浏览器安装插件，插件地址为：https://augmentedsteam.com/
+其用途是导出愿望单。
 
 ## Python模块安装
 
