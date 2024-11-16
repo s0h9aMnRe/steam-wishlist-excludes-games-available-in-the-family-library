@@ -20,20 +20,39 @@
 ## Python模块安装
 
 ### pyperclip
-安装命令：pip install pyperclip。这是一个用于复制和粘贴文本到剪贴板的模块，它提供了简单的接口来访问系统剪贴板。
+```bash
+pip install pyperclip
+```
+这是一个用于复制和粘贴文本到剪贴板的模块，它提供了简单的接口来访问系统剪贴板。
 
 ### pyautogui
-安装命令：pip install pyautogui。这个模块可用于自动化鼠标和键盘操作。
+```bash
+pip install pyautogui
+```
+这个模块可用于自动化鼠标和键盘操作。
 
 ### pytesseract
-安装命令：pip install pytesseract。pytesseract是一个光学字符识别（OCR）工具的Python封装，它可以识别图像中的文字。不过，要使用它，还需要安装Tesseract OCR引擎（在不同操作系统下安装方式不同）。
-- 在Ubuntu系统中，可以使用sudo apt - get install tesseract - ocr安装Tesseract OCR引擎。
-- 在Windows系统中，需要从官网（https://github.com/UB - Mannheim/tesseract/wiki）下载安装包进行安装。
+```bash
+pip install pytesseract
+```
+pytesseract是一个光学字符识别（OCR）工具的Python封装，它可以识别图像中的文字。不过，要使用它，还需要安装Tesseract OCR引擎（在不同操作系统下安装方式不同）。
+
+在Ubuntu系统中：
+```bash
+sudo apt - get install tesseract - ocr
+```
+在Windows系统中，需要从官网（https://github.com/UB - Mannheim/tesseract/wiki）下载安装包进行安装。
 
 ### Pillow
-安装命令：pip install Pillow。Pillow提供了强大的图像处理功能，比如打开图像Image.open()、保存图像、对图像进行裁剪、旋转等操作。
+```bash
+pip install Pillow
+```
+Pillow提供了强大的图像处理功能，比如打开图像`Image.open()`、保存图像、对图像进行裁剪、旋转等操作。
 
 ### pyscreenshot
-安装命令：pip install pyscreenshot。这个模块用于截取屏幕图像。
+```bash
+pip install pyscreenshot
+```
+这个模块用于截取屏幕图像。
 
 具体使用方法在代码注释内有详细说明。
