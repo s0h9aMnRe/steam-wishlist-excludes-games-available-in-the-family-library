@@ -18,18 +18,19 @@
 其用途是导出愿望单。
 
 ## 如何导出愿望单
-![如何确定安装好了augmentedsteam](https://github.com/s0h9aMnRe/steam-wishlist-excludes-games-available-in-the-family-library/blob/main/%E7%A4%BA%E4%BE%8B%E7%85%A7%E7%89%87/%E5%9B%BE%E7%89%871.png)
 
-![图片2](https://github.com/s0h9aMnRe/steam-wishlist-excludes-games-available-in-the-family-library/blob/main/%E7%A4%BA%E4%BE%8B%E7%85%A7%E7%89%87/%E5%9B%BE%E7%89%872.png)
-
-![图片3](https://github.com/s0h9aMnRe/steam-wishlist-excludes-games-available-in-the-family-library/blob/main/%E7%A4%BA%E4%BE%8B%E7%85%A7%E7%89%87/%E5%9B%BE%E7%89%873.png)
-
+<div align="center">
+<img src="./示例照片/图片1.png" alt="主页面" width="80%"><br>
+<img src="./示例照片/图片2.png" alt="主页面" width="80%"><br>
+<img src="./示例照片/图片3.png" alt="主页面" width="80%"><br>
+</div>
+  
 ## 功能特点
 
-- **自动检查游戏状态**：自动在Steam商店中搜索游戏，识别下架或无法找到的游戏
+- **自动检查游戏状态**：自动在Steam库中搜索游戏，识别库里没有的游戏
 - **批量处理**：支持一次性检查整个愿望单中的所有游戏
 - **断点续传**：支持暂停和继续检查，意外中断后可恢复进度
-- **OCR识别**：使用先进的OCR技术识别搜索结果
+- **OCR识别**：使用OCR技术识别搜索结果
 - **红框定位**：提供可视化定位工具，确保准确识别搜索区域
 - **结果导出**：生成详细的检查报告，包含所有游戏的状态信息
 - **多分辨率支持**：完美适配4K等高分辨率屏幕
@@ -56,6 +57,27 @@
 5. 点击"开始检查"按钮开始自动检查
 6. 检查完成后，结果将保存在指定目录的文本文件中
 
+#### 界面截图
+
+<div align="center">
+<figure>
+<img src="./示例照片/图片5.png" alt="主页面" width="80%"><br>
+<figcaption align="center"><em> Steam愿望单检查工具主界面 - 展示红框定位和愿望单加载功能</em></figcaption>
+</figure>
+<figure>
+<img src="./示例照片/图片4.png" alt="断点续传" width="80%"><br>
+<figcaption align="center"><em>断点续传功能界面 - 支持检查过程中的暂停和继续操作</em></figcaption>
+</figure>
+<figure>
+<img src="./示例照片/图片6.png" alt="红框显示" width="80%"><br>
+<figcaption align="center"><em>红框定位功能 - 可视化定位Steam客户端搜索栏区域</em></figcaption>
+</figure>
+<figure>
+<img src="./示例照片/图片7.png" alt="输出结果" width="80%"><br>
+<figcaption align="center"><em>检查结果输出 - 显示已下架游戏列表和详细报告</em></figcaption>
+</figure>
+</div>
+
 ### 控制选项
 
 - **暂停/继续**：可随时暂停和继续检查过程
@@ -72,14 +94,6 @@
 - PyAutoGUI (自动化控制)
 - PyInstaller (打包为可执行文件)
 
-### 工作原理
-
-1. **界面交互**：用户通过GUI界面选择愿望单文件和输出目录
-2. **红框定位**：用户将红框定位到Steam客户端的搜索栏区域
-3. **自动化搜索**：程序自动在Steam搜索栏中输入游戏名称并执行搜索
-4. **OCR识别**：对搜索结果区域进行截图，使用OCR识别"找不到您要找的游戏吗"提示
-5. **结果记录**：根据OCR识别结果判断游戏是否存在，记录并显示结果
-6. **报告生成**：检查完成后生成详细的文本报告
 
 ## 开发致谢
 
@@ -93,18 +107,6 @@
 ## 许可证
 
 本项目采用 MIT 许可证发布。
-
-
-
-## 贡献指南
-
-欢迎贡献代码！请遵循以下步骤：
-
-1. Fork 项目仓库
-2. 创建新的分支 (`git checkout -b feature/your-feature`)
-3. 提交你的修改 (`git commit -am 'Add some feature'`)
-4. 推送到分支 (`git push origin feature/your-feature`)
-5. 创建 Pull Request
 
 ## 问题反馈
 
