@@ -2,7 +2,7 @@
 
 # 项目简介
 
-代码使用AI辅助编写。
+代码使用AI编写。
 起因是考虑到家庭组中大家都有的游戏就无需在愿望单中购买了，但steam至今尚未推出能方便且一目了然地排除愿望单内家庭组已有的游戏的功能。（而且我的愿望单中有上千个游戏，不适合人工逐个去筛选）
 
 # 实现思路
@@ -89,20 +89,43 @@
 ### 技术栈
 
 - Python 3.10+
-- Tkinter (GUI界面)
-- EasyOCR (光学字符识别)
-- PyAutoGUI (自动化控制)
-- PyInstaller (打包为可执行文件)
+- Tkinter（GUI 界面）
+- Windows Runtime OCR / `Windows.Media.Ocr`（光学字符识别）
+- PyAutoGUI（鼠标、键盘与截图自动化）
+- Pillow（图像预处理）
+- psutil（Steam 进程检测）
+- ctypes + Windows Clipboard API（特殊字符安全粘贴）
+- PyInstaller（打包为可执行文件）
 
+
+### requirements.txt
+
+当前项目依赖如下：
+
+```txt
+Pillow>=11.0.0
+PyAutoGUI>=0.9.54
+psutil>=5.9.8
+pyinstaller>=6.16.0
+winrt-runtime>=3.2
+winrt-Windows.Foundation>=3.2
+winrt-Windows.Globalization>=3.2
+winrt-Windows.Graphics.Imaging>=3.2
+winrt-Windows.Media.Ocr>=3.2
+winrt-Windows.Storage>=3.2
+winrt-Windows.Storage.Streams>=3.2
+```
 
 ## 开发致谢
 
 本工具的开发得到了以下项目的支持：
 
-- **DeepSeek AI**：提供强大的AI编程辅助
-- **AIPY (Advanced Intelligence Python)**：提供高级Python编程支持
-- **EasyOCR**：提供高效准确的OCR识别功能
-- **PyAutoGUI**：提供跨平台自动化控制能力
+- **WorkBuddy（腾讯）**：提供本次重构、问题定位、代码实现与文档整理协助
+- **Windows Runtime OCR / Windows.Media.Ocr**：提供 Windows 原生 OCR 能力
+- **PyAutoGUI**：提供鼠标、键盘控制与截图能力
+- **Pillow**：提供截图预处理和图像增强能力
+- **psutil**：用于检测 Steam 进程状态
+- **PyInstaller**：用于打包生成 Windows 可执行文件
 
 ## 许可证
 
@@ -111,3 +134,28 @@
 ## 问题反馈
 
 如果在使用过程中遇到任何问题，请在 Issues 页面提交问题报告。
+
+
+如果首次运行提示 OCR 不可用，请在 Windows 的“可选功能”里确认已经安装：
+
+- 中文（简体）OCR
+- 或英文 OCR
+
+
+## 兼容性说明
+
+- 当前重构版本主要面向 **Windows**
+- 因为 OCR 依赖的是 **Windows Runtime / Windows.Media.Ocr**
+
+
+## 已修复的问题
+
+这次重构顺手修掉了几个原版结构问题：
+
+- 去掉了 EasyOCR 的模型目录硬编码
+- 去掉了对本地绝对路径的依赖
+- 修复了断点恢复时序号和状态容易乱掉的问题
+- 避免在后台线程里直接大量操作 Tk 控件
+- 把进度文件放到了更稳定的位置，不再依赖当前工作目录
+一般正常的中文 / 英文 Windows 环境都能直接使用。
+
