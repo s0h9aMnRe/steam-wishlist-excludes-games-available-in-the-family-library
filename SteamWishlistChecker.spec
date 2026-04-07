@@ -1,16 +1,26 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+hiddenimports = [
+    "PIL._tkinter_finder",
+    "winrt.windows.foundation",
+    "winrt.windows.globalization",
+    "winrt.windows.graphics.imaging",
+    "winrt.windows.media.ocr",
+    "winrt.windows.storage",
+    "winrt.windows.storage.streams",
+]
+
 
 a = Analysis(
-    ['steamwishlist_v1.00.py'],
+    ["steamwishlist_v1.00.py"],
     pathex=[],
     binaries=[],
-    datas=[(r'C:\Users\DESKTOP-43TDRJE\Desktop\steamwishlist\easyocr', 'easyocr')],
-    hiddenimports=[],
+    datas=[],
+    hiddenimports=hiddenimports,
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
-    excludes=[],
+    excludes=["easyocr", "torch", "torchvision", "numpy", "cv2"],
     noarchive=False,
     optimize=0,
 )
@@ -22,7 +32,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='SteamWishlistChecker',
+    name="SteamWishlistChecker",
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -35,5 +45,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['icon.ico'],
+    icon=["icon.ico"],
 )
